@@ -1,350 +1,406 @@
-# JobApplication - Job Portal System
+<div align="center">
 
-A full-stack Job Portal and Management System built using **Spring Boot** and **React.js**.  
-The application provides separate **User** and **Admin** modules with secure authentication, job posting management, and application tracking.
+# 🚀 JobSphere — Full-Stack Job Portal & Management System
 
----
+<p align="center">
+  <strong>A modern, enterprise-ready recruitment platform connecting top talent with industry-leading companies.</strong>
+</p>
 
-# 🚀 Features
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.12-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
+[![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Java](https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0+-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![Spring Security & JWT](https://img.shields.io/badge/Security-Spring%20Security%20%2B%20JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)](https://jwt.io/)
+[![Material UI](https://img.shields.io/badge/MUI-5.15-007FFF?style=for-the-badge&logo=mui&logoColor=white)](https://mui.com/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
-## 👤 User Module
-- ✅ User Registration and Login
-- ✅ Browse and Search Jobs
-- ✅ View Job Details
-- ✅ Apply for Jobs
-- ✅ JWT-Based Authentication
-- ✅ Responsive User Interface
+<br/>
 
-## 👨‍💼 Admin Module
-- ✅ Admin Registration and Login
-- ✅ Add New Job Postings
-- ✅ Update Existing Jobs
-- ✅ Delete Job Postings
-- ✅ View All Applications
-- ✅ Manage Applications
-- ✅ Role-Based Access Control
-
----
-
-# 📸 Screenshots
-
-### 🏠 Home Page
-![Home Page](Image/home-page.png)
-
-### 🔐 Login Page
-![Login Page](Image/login-page.png)
-
-### 📝 Register Page
-![Register Page](Image/register-page.png)
-
-### 👤 User Dashboard
-![User Dashboard](Image/user-dashboard.png)
-
-### 👨‍💼 Admin Dashboard
-![Admin Dashboard](Image/admin-dashboard.png)
-
-### ➕ Admin Add Job - Step 1
-![Admin Add Job 1](Image/admin-add-job-1.png)
-
-### ➕ Admin Add Job - Step 2
-![Admin Add Job 2](Image/admin-add-job-2.png)
-
-### ➕ Admin Add Job - Step 3
-![Admin Add Job 3](Image/admin-add-job-3.png)
-
-### ➕ Admin Add Job - Step 4
-![Admin Add Job 4](Image/admin-add-job-4.png)
-
-### 💾 Save Job Page
-![Save Job](Image/save-job.png)
-
-### 📧 Application Email Notification
-![Application Mail](Image/application-mail.png)
+[Key Features](#-key-features) •
+[UI Showcase](#-ui-showcase) •
+[Tech Stack](#-tech-stack) •
+[System Architecture](#-system-architecture) •
+[Quick Start](#-quick-start-guide) •
+[API Reference](#-api-endpoints-reference) •
+[Default Credentials](#-default-credentials)
 
 ---
 
-# 🛠️ Tech Stack
+</div>
 
-## Backend
-- **Framework:** Spring Boot 3.2.12
-- **Language:** Java 21
-- **Database:** MySQL
-- **ORM:** JPA/Hibernate
-- **Security:** Spring Security with JWT
-- **Email:** Spring Boot Mail Starter
-- **Utilities:** Lombok
-- **Package:** `com.alok.jobApplication`
+## 🌟 Overview
 
-## Frontend
-- **Framework:** React 18.2.0
-- **UI Library:** Material-UI (MUI) 5.15.0
-- **HTTP Client:** Axios
-- **Routing:** React Router DOM 6.21.0
-- **Animations:** React TSParticles
+**JobSphere** is an end-to-end Job Portal & Recruitment Management System engineered with **Spring Boot 3.2 (Java 21)** on the backend and **React 18** on the frontend. It delivers a fast, responsive, and secure experience for both job seekers looking for their dream roles and hiring managers seeking streamlined applicant tracking, job publishing, and real-time candidate management.
 
 ---
 
-# 📋 Prerequisites
+## ✨ Key Features
 
-- Java 21 or higher
-- Maven 3.6+
-- Node.js 16+ and npm
-- MySQL 8.0+
-- IntelliJ IDEA / Eclipse / VS Code
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 👨‍💻 Candidate Portal
+* **Live Job Search & Filters:** Real-time keyword search across roles, technologies, experience levels, and locations.
+* **1-Click Application:** Frictionless application process linked directly to applicant profile and resume details.
+* **Saved Jobs:** Bookmark opportunities to review and apply anytime.
+* **Interactive Kanban Board:** Visualize application progress (*Applied*, *In Review*, *Shortlisted*, *Interview*, *Offered*, *Rejected*).
+* **Automated Email Notifications:** Instant confirmation upon successful job application.
+* **Career Resources & Guides:** Curated interview prep, resume checklists, and salary trends.
+
+</td>
+<td width="50%" valign="top">
+
+### 💼 Recruiter & Admin Suite
+* **Multi-Step Job Publisher:** 4-step guided wizard for creating structured job listings with tech stack tags and salary benchmarks.
+* **Full CRUD Operations:** Edit, publish, pause, or remove job listings instantly.
+* **Application Tracking System (ATS):** Review applicant submissions, contact information, and attached credentials.
+* **Status Pipeline Control:** Move candidates between evaluation stages with a single click.
+* **Role-Based Access Control (RBAC):** Strict JWT-authenticated route guards protecting admin management endpoints.
+* **Seed Data Auto-Initialization:** Ready-to-demo data loaded automatically on first boot.
+
+</td>
+</tr>
+</table>
 
 ---
 
-# 🗄️ Database Setup
+## 📸 UI Showcase
 
-Create a MySQL database:
+<div align="center">
 
+### 🏠 Landing Page & Hero Section
+*Hero with live search counters, featured category badges, and quick filters.*
+<br/>
+<img src="Image/home-page.png" alt="Home Page" width="850" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+
+<br/><br/>
+
+### 📊 Dashboards: Candidate vs Admin Recruiter
+<table>
+  <tr>
+    <td align="center" width="50%"><strong>👤 Candidate Dashboard & Saved Jobs</strong></td>
+    <td align="center" width="50%"><strong>👨‍💼 Recruiter Admin Management Portal</strong></td>
+  </tr>
+  <tr>
+    <td><img src="Image/user-dashboard.png" alt="User Dashboard" width="420" /></td>
+    <td><img src="Image/admin-dashboard.png" alt="Admin Dashboard" width="420" /></td>
+  </tr>
+</table>
+
+<br/>
+
+### 🔐 Authentication Flow
+<table>
+  <tr>
+    <td align="center" width="50%"><strong>Login Screen</strong></td>
+    <td align="center" width="50%"><strong>Registration Screen</strong></td>
+  </tr>
+  <tr>
+    <td><img src="Image/login-page.png" alt="Login Page" width="420" /></td>
+    <td><img src="Image/register-page.png" alt="Register Page" width="420" /></td>
+  </tr>
+</table>
+
+<br/>
+
+### ➕ Multi-Step Job Creation Wizard (Admin)
+<table>
+  <tr>
+    <td align="center" width="50%"><strong>Step 1: Role Overview & Basic Details</strong></td>
+    <td align="center" width="50%"><strong>Step 2: Tech Stack & Skill Tags</strong></td>
+  </tr>
+  <tr>
+    <td><img src="Image/admin-add-job-1.png" alt="Admin Add Job Step 1" width="420" /></td>
+    <td><img src="Image/admin-add-job-2.png" alt="Admin Add Job Step 2" width="420" /></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Step 3: Experience & Compensation</strong></td>
+    <td align="center"><strong>Step 4: Final Review & Publishing</strong></td>
+  </tr>
+  <tr>
+    <td><img src="Image/admin-add-job-3.png" alt="Admin Add Job Step 3" width="420" /></td>
+    <td><img src="Image/admin-add-job-4.png" alt="Admin Add Job Step 4" width="420" /></td>
+  </tr>
+</table>
+
+<br/>
+
+### 💾 Job Bookmarking & Email Confirmation
+<table>
+  <tr>
+    <td align="center" width="50%"><strong>Saved Jobs Drawer</strong></td>
+    <td align="center" width="50%"><strong>Automated Email Dispatch</strong></td>
+  </tr>
+  <tr>
+    <td><img src="Image/save-job.png" alt="Save Job" width="420" /></td>
+    <td><img src="Image/application-mail.png" alt="Application Mail Notification" width="420" /></td>
+  </tr>
+</table>
+
+</div>
+
+---
+
+## 🛠️ Tech Stack
+
+<div align="center">
+
+| Layer | Technologies & Libraries |
+| :--- | :--- |
+| **Backend Framework** | **Java 21**, **Spring Boot 3.2.12**, Spring Web MVC, Spring Security |
+| **Data Persistence** | **MySQL 8.0+**, Spring Data JPA, Hibernate ORM |
+| **Security & Auth** | **JWT (JSON Web Token)**, BCrypt Password Hashing, RBAC Filters |
+| **Mail Services** | **Spring Boot Starter Mail** (JavaMailSender / Gmail SMTP) |
+| **Frontend Core** | **React 18.2**, Vanilla JavaScript (ES6+), React Context API |
+| **UI Components** | **Material-UI (MUI 5)**, Material Icons, Custom CSS3 Design System |
+| **Routing & HTTP** | **React Router DOM v6**, **Axios** with Bearer Token Interceptors |
+| **Build & Tooling** | **Maven Wrapper (`./mvnw`)**, **npm**, Postman, Git |
+
+</div>
+
+---
+
+## 🏗️ System Architecture
+
+```mermaid
+graph TD
+    subgraph Client [Frontend - React SPA]
+        UI[Material-UI + Custom CSS Components]
+        Context[Auth Context & State Store]
+        Axios[Axios HTTP Client with JWT Interceptors]
+        UI --> Context
+        Context --> Axios
+    end
+
+    subgraph Gateway [Security & Routing]
+        CORS[CORS Filter]
+        JWTFilter[JwtAuthenticationFilter]
+        Security[Spring Security Config]
+        CORS --> JWTFilter --> Security
+    end
+
+    subgraph Backend [Backend - Spring Boot REST API]
+        AuthCtrl[AuthController]
+        JobCtrl[JobRestController]
+        AppCtrl[JobApplicationController]
+        
+        JobSvc[JobService]
+        EmailSvc[EmailService]
+        UserSvc[UserDetailsServiceImpl]
+        
+        JobRepo[(JobRepo)]
+        AppRepo[(JobApplicationRepo)]
+        UserRepo[(UserRepo)]
+    end
+
+    subgraph Persistence [Database & External Services]
+        MySQL[(MySQL Database)]
+        SMTP[Gmail SMTP Server]
+    end
+
+    Axios -->|REST / JSON| CORS
+    Security --> AuthCtrl & JobCtrl & AppCtrl
+    
+    AuthCtrl --> UserSvc --> UserRepo
+    JobCtrl --> JobSvc --> JobRepo
+    AppCtrl --> JobSvc & EmailSvc
+    JobSvc --> AppRepo & JobRepo
+    
+    UserRepo & JobRepo & AppRepo --> MySQL
+    EmailSvc -->|TLS 587| SMTP
+```
+
+---
+
+## 📋 Prerequisites
+
+Before running the application, make sure you have the following installed:
+
+- **JDK 21** or higher: `java -version`
+- **Node.js 18+** & **npm 9+**: `node -v` && `npm -v`
+- **MySQL Server 8.0+**: `mysql -u root -p`
+- **Git**: `git --version`
+
+---
+
+## 🚀 Quick Start Guide
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/Chandan9153/job_portal.git
+cd job_portal
+```
+
+### 2️⃣ Database Setup
+Log in to MySQL and create the database:
 ```sql
 CREATE DATABASE jobapp;
 ```
 
-Update database credentials in:
-
+Update your database credentials in `Backend-SpringBoot/src/main/resources/application.properties` (or use environment variables):
 ```properties
-Backend-SpringBoot/src/main/resources/application.properties
+spring.datasource.url=jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:jobapp}?useSSL=false&allowPublicKeyRetrieval=true
+spring.datasource.username=${DB_USERNAME:root}
+spring.datasource.password=${DB_PASSWORD:your_password}
 ```
 
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/jobapp?useSSL=false&allowPublicKeyRetrieval=true
-spring.datasource.username=root
-spring.datasource.password=YOUR_PASSWORD
-```
-
----
-
-# ⚙️ Backend Setup
-
-Navigate to backend directory:
-
+### 3️⃣ Backend Setup (Spring Boot)
+Open a terminal in the root folder:
 ```bash
 cd Backend-SpringBoot
-```
 
-Build the project:
-
-```bash
+# Build the application
 mvn clean install
+
+# Run using Maven wrapper
+./mvnw spring-boot:run
 ```
+*The REST API will start at: **`http://localhost:8080`***
 
-Run the Spring Boot application:
+> [!NOTE]  
+> On first startup, the backend will automatically seed sample job listings and demo accounts into your MySQL database!
 
-```bash
-mvn spring-boot:run
-```
-
-Backend runs on:
-
-```bash
-http://localhost:8080
-```
-
----
-
-# 💻 Frontend Setup
-
-Navigate to frontend directory:
-
+### 4️⃣ Frontend Setup (React)
+Open a second terminal window:
 ```bash
 cd Frontend-React
-```
 
-Install dependencies:
-
-```bash
+# Install dependencies
 npm install
-```
 
-Run the React application:
-
-```bash
+# Start development server
 npm start
 ```
-
-Frontend runs on:
-
-```bash
-http://localhost:3000
-```
+*The web client will open at: **`http://localhost:3000`***
 
 ---
 
-# 🔐 Backend API Endpoints
+## 🔑 Default Credentials
 
-## Authentication
-```http
-POST /auth/register
-POST /auth/login
-```
+The system seeds default test accounts for immediate testing:
 
-## Jobs (Public)
-```http
-GET /jobPosts
-GET /jobPost/{postId}
-GET /jobPosts/keyword/{keyword}
-```
-
-## Jobs (Admin Only)
-```http
-POST /jobPost
-PUT /jobPost
-DELETE /jobPost/{postId}
-```
-
-## Job Applications (User)
-```http
-POST /jobPost/{postId}/apply
-```
-
-## Job Applications (Admin)
-```http
-GET /applications
-GET /applications/job/{jobId}
-GET /applications/user/{userId}
-PUT /applications/{applicationId}/status
-```
+| Role | Email | Password | Access Level |
+| :--- | :--- | :--- | :--- |
+| **Admin / Recruiter** | `admin@jobapp.com` | `admin123` | Full Access: Post, Edit, Delete Jobs & Manage Applications |
+| **Job Seeker / User** | `user@jobapp.com` | `user123` | Search, View Details, Apply, and Track Saved Jobs |
 
 ---
 
-# 👨‍💻 Usage
+## 📡 API Endpoints Reference
 
-## For Users
-1. Register a new account
-2. Login using credentials
-3. Browse available jobs
-4. Search jobs using keywords
-5. View detailed job descriptions
-6. Apply for jobs
+### 🔐 Authentication
+| Method | Endpoint | Access | Description |
+| :--- | :--- | :--- | :--- |
+| `POST` | `/auth/register` | Public | Register a new user (`USER` or `ADMIN`) |
+| `POST` | `/auth/login` | Public | Authenticate user & return JWT token |
 
-## For Admins
-1. Register/Login as Admin
-2. Add new jobs
-3. Edit existing jobs
-4. Delete job postings
-5. View all applications
-6. Manage candidate applications
+### 💼 Job Management
+| Method | Endpoint | Access | Description |
+| :--- | :--- | :--- | :--- |
+| `GET` | `/jobPosts` | Public | Fetch all available job postings |
+| `GET` | `/jobPost/{postId}` | Public | Retrieve detailed information for a specific job |
+| `GET` | `/jobPosts/keyword/{keyword}` | Public | Search jobs by title, skills, or description |
+| `POST` | `/jobPost` | `ADMIN` | Create a new job listing |
+| `PUT` | `/jobPost` | `ADMIN` | Update an existing job post |
+| `DELETE` | `/jobPost/{postId}` | `ADMIN` | Delete a job posting by ID |
+
+### 📝 Job Applications & Pipeline
+| Method | Endpoint | Access | Description |
+| :--- | :--- | :--- | :--- |
+| `POST` | `/jobPost/{postId}/apply` | `USER` | Submit job application with applicant profile |
+| `GET` | `/applications` | `ADMIN` | Retrieve all applications across jobs |
+| `GET` | `/applications/job/{jobId}` | `ADMIN` | Get applications for a specific job |
+| `GET` | `/applications/user/{userId}` | `USER` / `ADMIN` | View applications submitted by a user |
+| `PUT` | `/applications/{id}/status` | `ADMIN` | Update status (`APPLIED`, `REVIEWING`, `ACCEPTED`, `REJECTED`) |
 
 ---
 
-📂 Project Structure
+## 📂 Project Directory Structure
 
-```bash
+```plaintext
 job-portal-and-management-system/
-│
-├── images/                         # Project screenshots
-│   ├── home-page.png
-│   ├── login-page.png
-│   ├── register-page.png
-│   ├── user-dashboard.png
-│   ├── admin-dashboard.png
-│   ├── admin-add-job-1.png
-│   ├── admin-add-job-2.png
-│   ├── admin-add-job-3.png
-│   ├── admin-add-job-4.png
-│   ├── save-job.png
-│   └── application-mail.png
-│
-├── Backend-SpringBoot/             # Spring Boot Backend
+├── Backend-SpringBoot/                  # Java 21 & Spring Boot 3.2 backend
 │   ├── src/
-│   │   └── main/
-│   │       ├── java/
-│   │       │   └── com/alok/jobApplication/
-│   │       │       ├── config/
-│   │       │       ├── controller/
-│   │       │       ├── enums/
-│   │       │       ├── filter/
-│   │       │       ├── model/
-│   │       │       ├── repo/
-│   │       │       ├── service/
-│   │       │       └── util/
-│   │       │
-│   │       └── resources/
-│   │           └── application.properties
-│   │
-│   └── pom.xml
+│   │   ├── main/
+│   │   │   ├── java/com/alok/jobApplication/
+│   │   │   │   ├── config/              # SecurityConfig, CorsConfig
+│   │   │   │   ├── controller/          # REST endpoints (Auth, Job, Application)
+│   │   │   │   ├── enums/               # Role, ApplicationStatus
+│   │   │   │   ├── filter/              # JwtAuthenticationFilter
+│   │   │   │   ├── model/               # JPA Entities (AppUser, JobPost, JobApplication)
+│   │   │   │   ├── repo/                # Spring Data JPA Repositories
+│   │   │   │   ├── service/             # Business logic & EmailService
+│   │   │   │   └── util/                # JwtUtil token generation & validation
+│   │   │   └── resources/
+│   │   │       └── application.properties # App configuration & profiles
+│   │   └── test/                        # Unit and integration tests
+│   ├── mvnw & mvnw.cmd                  # Maven wrappers
+│   └── pom.xml                          # Maven build dependencies
 │
-├── Frontend-React/                 # React Frontend
-│   ├── public/
+├── Frontend-React/                      # React 18 single page application
+│   ├── public/                          # Static assets and index.html
 │   ├── src/
-│   │   ├── components/
-│   │   ├── context/
-│   │   ├── services/
-│   │   ├── pages/
-│   │   └── App.js
-│   │
-│   └── package.json
+│   │   ├── components/                  # Navbar, Hero, Kanban, Modals, Job cards
+│   │   ├── context/                     # AuthContext (JWT session state)
+│   │   ├── utils/                       # Axios API client & fallback job data
+│   │   ├── App.js                       # Route configuration & layouts
+│   │   ├── App.css & index.css          # Design system, theme styles & utilities
+│   │   └── index.js                     # React DOM entrypoint
+│   └── package.json                     # NPM dependencies and scripts
 │
-└── README.md
-
-# 🔑 Key Features Implementation
-
-## Authentication & Authorization
-- JWT-Based Authentication
-- Spring Security Integration
-- Role-Based Access Control
-- Protected Admin Routes
-- Token Validation & Expiration Handling
-
-## Job Management
-- Full CRUD Operations
-- Dynamic Job Details
-- Search Functionality
-- Registration Status Handling
-
-## Application Management
-- Users can apply for jobs
-- Admins can manage all applications
-- Application status tracking
-
----
-
-# 🛠️ Troubleshooting
-
-## Backend Issues
-- Ensure MySQL is running
-- Verify database credentials
-- Check Java version:
-
-```bash
-java -version
+├── Image/                               # High-resolution screenshots & UI previews
+├── .gitignore                           # Git ignore rules for node_modules, target, etc.
+└── README.md                            # Comprehensive project documentation
 ```
 
-- Ensure port `8080` is free
+---
 
-## Frontend Issues
+## ⚙️ Environment Variables (Optional)
 
-Clear dependencies and reinstall:
+You can customize runtime behavior by passing environment variables:
 
-```bash
-rm -rf node_modules
-npm install
-```
-
-Verify:
-- Backend is running on port `8080`
-- CORS allows `http://localhost:3000`
+| Variable | Default Value | Description |
+| :--- | :--- | :--- |
+| `DB_HOST` | `localhost` | MySQL database host |
+| `DB_PORT` | `3306` | MySQL port |
+| `DB_NAME` | `jobapp` | Database schema name |
+| `DB_USERNAME` | `root` | Database username |
+| `DB_PASSWORD` | `Alok#123` | Database password |
+| `JWT_SECRET` | `mySecretKey...` | Base64 / HMAC signing key for JWT |
+| `JWT_EXPIRATION` | `86400000` (24h) | Token validity in milliseconds |
+| `MAIL_HOST` | `smtp.gmail.com` | SMTP host for email dispatch |
+| `MAIL_PORT` | `587` | SMTP port |
+| `MAIL_USERNAME` | *(configurable)* | Gmail username for automated emails |
+| `MAIL_PASSWORD` | *(configurable)* | Gmail App Password (16 characters) |
 
 ---
 
-# 📝 Notes
+## 🤝 Contributing
 
-- Uses `spring.jpa.hibernate.ddl-auto=update`
-- JWT tokens stored in browser localStorage
-- Admin routes are protected
-- Email notifications supported
-- Responsive UI for desktop and mobile
+Contributions are always welcome! If you want to contribute:
 
----
-
-# 📄 License
-
-This project is developed for learning and portfolio purposes.
+1. **Fork** the repository
+2. **Create** your feature branch: `git checkout -b feature/AmazingFeature`
+3. **Commit** your changes: `git commit -m 'Add some AmazingFeature'`
+4. **Push** to the branch: `git push origin feature/AmazingFeature`
+5. **Open** a Pull Request
 
 ---
 
-# 📬 Contact
+## 📄 License
 
-For issues or suggestions, feel free to connect.
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+## 👤 Author & Connect
+
+**Chandan Kumar**
+
+- **GitHub:** [@Chandan9153](https://github.com/Chandan9153)
+- **Project Link:** [https://github.com/Chandan9153/job_portal](https://github.com/Chandan9153/job_portal)
+
+<div align="center">
+  <sub>Built with ❤️ using Spring Boot & React</sub>
+</div>
